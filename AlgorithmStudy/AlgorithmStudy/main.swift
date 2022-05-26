@@ -25,6 +25,7 @@ func quickSort<T: Comparable>(_ a: [T]) -> [T] {
     return quickSort(low) + pivotIndex + quickSort(high)
 }
 
-let Arr: [Int] = [ 0,3,4,12,5,1 ]
-
-print(quickSort(Arr))
+let arr: [Int] = [ 0,3,4,12,5,1 ]
+let arr2: [String] = ["a", "c", "e", "d", "b"]
+print(quickSort(arr))
+print(quickSort(arr2))
