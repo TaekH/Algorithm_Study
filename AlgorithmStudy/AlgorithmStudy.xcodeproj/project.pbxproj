@@ -29,6 +29,7 @@
 		2A626BA12A113A3C001B2E3E /* Step24_PrefixSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A626BA02A113A3C001B2E3E /* Step24_PrefixSum.swift */; };
 		2A626BA32A113AA6001B2E3E /* Step25_Greedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A626BA22A113AA6001B2E3E /* Step25_Greedy.swift */; };
 		2A626BA52A113BBF001B2E3E /* Etc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A626BA42A113BBF001B2E3E /* Etc.swift */; };
+		2A626BA72A12930C001B2E3E /* Level3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A626BA62A12930C001B2E3E /* Level3.swift */; };
 		2A84AA1F29D33437008332E5 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A84AA1E29D33437008332E5 /* Heap.swift */; };
 		2A8CDB29297F794700FDCA2C /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8CDB28297F794700FDCA2C /* Queue.swift */; };
 		2A929E66298630BF00BFC21D /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A929E65298630BF00BFC21D /* Stack.swift */; };
@@ -77,6 +78,7 @@
 		2A626BA02A113A3C001B2E3E /* Step24_PrefixSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step24_PrefixSum.swift; sourceTree = "<group>"; };
 		2A626BA22A113AA6001B2E3E /* Step25_Greedy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step25_Greedy.swift; sourceTree = "<group>"; };
 		2A626BA42A113BBF001B2E3E /* Etc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etc.swift; sourceTree = "<group>"; };
+		2A626BA62A12930C001B2E3E /* Level3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level3.swift; sourceTree = "<group>"; };
 		2A84AA1E29D33437008332E5 /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 		2A8CDB28297F794700FDCA2C /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		2A929E65298630BF00BFC21D /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				2A626B952A112B03001B2E3E /* Level1.swift */,
 				2A626B972A112BD8001B2E3E /* Level2.swift */,
+				2A626BA62A12930C001B2E3E /* Level3.swift */,
 			);
 			path = Programmers;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A626BA72A12930C001B2E3E /* Level3.swift in Sources */,
 				2A626B962A112B03001B2E3E /* Level1.swift in Sources */,
 				2A84AA1F29D33437008332E5 /* Heap.swift in Sources */,
 				2A626BA12A113A3C001B2E3E /* Step24_PrefixSum.swift in Sources */,

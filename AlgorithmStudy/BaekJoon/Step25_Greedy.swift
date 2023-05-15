@@ -14,7 +14,7 @@ import Foundation
 fileprivate class Step25_Greedy {
     
     //MARK: 백준 11047 동전0 <그리디>
-
+    
     //let input = readLine()!.split(separator: " ").map { Int(String($0))! }
     //var unit = [Int]()
     //var k = input[1]
@@ -37,7 +37,7 @@ fileprivate class Step25_Greedy {
     //    }
     //}
     //print(count)
-
+    
     //MARK: 백준 11047 동전0 <그리디>
     //var input = readLine()!.split(separator: " ").map { Int(String($0))! }
     //var unit = [Int]()
@@ -55,7 +55,7 @@ fileprivate class Step25_Greedy {
     //    count += n
     //}
     //print(count)
-
+    
     //MARK: 백준 1931 회의실 배정 < 그리디 >
     //var times = [[Int]]()
     //for i in 0..<Int(readLine()!)! {
@@ -79,7 +79,7 @@ fileprivate class Step25_Greedy {
     //    }
     //}
     //print(count)
-
+    
     //MARK: 백준 11399 ATM <그리디>
     //let input = Int(readLine()!)!
     //var arr = readLine()!.split(separator: " ").map { Int(String($0))! }
@@ -90,8 +90,8 @@ fileprivate class Step25_Greedy {
     //    result[i] += arr[i-1] + result[i-1]
     //}
     //print(result.reduce(0, +))
-
-
+    
+    
     //MARK: 백준 1541 잃어버린 괄호 < 그리디 >
     //let input = readLine()!.split(separator: "-").map { String($0) }
     //var tmp = 0
@@ -105,5 +105,19 @@ fileprivate class Step25_Greedy {
     //    tmp = 0
     //}
     //print(result)
-
+    
+    //MARK: 백준 13305 <그리디>
+    //let input = Int(readLine()!)!
+    //let dis = readLine()!.split(separator: " ").map { Int(String($0))! }
+    //let cost = readLine()!.split(separator: " ").map { Int(String($0))! }
+    //var result = 0
+    //var currentCost = cost[0]
+    //for i in 0..<input-1 {
+    //    if currentCost > cost[i] {
+    //        currentCost = cost[i]
+    //    }
+    //    result += currentCost * dis[i]
+    //}
+    //print(result)
+    
 }
