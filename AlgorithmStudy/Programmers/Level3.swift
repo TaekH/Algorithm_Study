@@ -59,3 +59,36 @@ import Foundation
 //    dfs(begin, 0)
 //    return result
 //}
+
+//MARK: 프로그래머스 N으로 표현 <DP>
+//func solution(_ N:Int, _ number:Int) -> Int {
+//    if N == number { return 1 }
+//    var result = -1
+//    
+//    func dfs(_ n: Int, _ count: Int) {
+//        if count > 8 {
+//            return
+//        }
+//        if n == number {
+//            if count < result || result == -1 {
+//                result = count
+//            }
+//            return
+//        }
+//        var nn = 0
+//        
+//        for i in 0..<8 {
+//            if result != -1 && result < count + i + 1 {
+//                break
+//            }
+//            nn = 10 * nn + N
+//            dfs(n + nn, count + i + 1)
+//            dfs(n - nn, count + i + 1)
+//            dfs(n * nn, count + i + 1)
+//            dfs(n / nn, count + i + 1)
+//        }
+//    }
+//    dfs(0,0)
+//    
+//    return result
+//}

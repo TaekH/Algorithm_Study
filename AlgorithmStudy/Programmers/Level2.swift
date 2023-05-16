@@ -29,3 +29,36 @@ import Foundation
 //}
 //
 //print(solution(2, 10, [7,4,5,6]))
+
+//MARK: 프로그래머스 큰 수 만들기 <greedy>
+//func solution(_ number:String, _ k:Int) -> String {
+//    let number = number.map { Int(String($0))!}
+//    var arr = [number[0]]
+//    var k = k
+//    for i in 1..<number.count {
+//        while number[i] > arr.last ?? -1 && arr.count > 0 && k != 0 {
+//            arr.removeLast()
+//            k -= 1
+//        }
+//        arr.append(number[i])
+//    }
+//    return arr[0..<arr.count-k].map { String($0) }.joined()
+//}
+
+//MARK: 프로그래머스 모음사전 <완전 탐색>
+//func solution(_ word:String) -> Int {
+//var count = 0
+//let words = ["A", "E", "I", "O", "U"]
+//var result = [String]()
+//func dfs(_ str: String) {
+//    result.append(str)
+//    if str.count == 5 {
+//        return
+//    }
+//    for i in words {
+//        dfs(str+i)
+//    }
+//}
+//dfs("")
+//return result.firstIndex(of: word)!
+//}
