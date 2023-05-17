@@ -60,6 +60,34 @@ import Foundation
 //    return result
 //}
 
+//MARK: 프로그래머스 여행경로 <DFS>
+//func solution(_ tickets:[[String]]) -> [String] {
+//var tickets = tickets.sorted { $0[1] < $1[1] }
+//var visited = Array(repeating: false, count: tickets.count)
+//var result = [String]()
+//func dfs(_ place: String) {
+//    if !visited.contains(false) {
+//        result.append(place)
+//        return
+//    }
+//    for i in 0..<tickets.count {
+//        if tickets[i][0] == place && visited[i] == false {
+//            visited[i] = true
+//            result.append(place)
+//            dfs(tickets[i][1])
+//            if result.count == tickets.count + 1 {
+//                return
+//            }
+//            visited[i] = false
+//            result.removeLast()
+//        }
+//    }
+//}
+//
+//dfs("ICN")
+//return result
+//}
+
 //MARK: 프로그래머스 N으로 표현 <DP>
 //func solution(_ N:Int, _ number:Int) -> Int {
 //    if N == number { return 1 }

@@ -62,3 +62,21 @@ import Foundation
 //dfs("")
 //return result.firstIndex(of: word)!
 //}
+
+
+//MARK: 프로그래머스 타겟넘버 <DFS>
+//func solution(_ numbers:[Int], _ target:Int) -> Int {
+//    var result = 0
+//    func dfs(_ value: Int, _ idx: Int) {
+//        if value == target {
+//            result += 1
+//            return
+//        }
+//        for n in idx..<numbers.count {
+//            dfs(value + numbers[n], idx+1)
+//            dfs(value - numbers[n], idx+1)
+//        }
+//    }
+//    dfs(0, 0)
+//    return result
+//}
