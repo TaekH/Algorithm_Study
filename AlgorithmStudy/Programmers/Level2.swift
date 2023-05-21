@@ -80,3 +80,59 @@ import Foundation
 //    dfs(0, 0)
 //    return result
 //}
+
+//MARK: 프로그래머스-숫자 변환하기 <DP>
+//func solution(_ x:Int, _ y:Int, _ n:Int) -> Int {
+//    var result = 0
+//    var set = Set([x])
+//
+//    while !set.isEmpty {
+//        var tmpSet = Set<Int>()
+//
+//        if set.contains(y) {
+//            return result
+//        }
+//
+//        for i in set {
+//            if i + n <= y {
+//                tmpSet.insert(i+n)
+//            }
+//            if i * 2 <= y {
+//                tmpSet.insert(i*2)
+//            }
+//            if i * 3 <= y {
+//                tmpSet.insert(i*3)
+//            }
+//        }
+//        set = tmpSet
+//        result += 1
+//    }
+//
+//    return -1
+//}
+
+//MARK: 프로그래머스-기능개발 <Queue>
+//func solution(_ progresses:[Int], _ speeds:[Int]) -> [Int] {
+//    var days = [Int]()
+//    for i in 0..<progresses.count {
+//        var tmp = (100 - progresses[i]) / speeds[i]
+//        if (100 - progresses[i]) % speeds[i] != 0 { tmp += 1}
+//        days.append(tmp)
+//    }
+//    var result = [Int]()
+//    var tmp = days[0]
+//    var count = 1
+//    for i in 1..<days.count {
+//        if days[i] <= tmp {
+//            count += 1
+//        }
+//        else {
+//            tmp = days[i]
+//            result.append(count)
+//            count = 1
+//        }
+//    }
+//    result.append(count)
+//
+//    return result
+//}

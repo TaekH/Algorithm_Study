@@ -55,4 +55,54 @@ fileprivate class Step28_PriorityQueue {
     //    }
     //}
 
+    //MARK: 백준 1927 최소 힙 <우선순위 큐>
+    //var heap = [Int]()
+    //
+    //for _ in 0..<Int(readLine()!)! {
+    //    let input = Int(readLine()!)!
+    //    if input == 0 {
+    //        if heap.count == 0 { print("0") }
+    //        else {
+    //            var (min, idx) = (Int(pow(2.0, 31.0)),0)
+    //
+    //            for i in 0..<heap.count {
+    //                if min >= heap[i] {
+    //                    min = heap[i]
+    //                    idx = i
+    //                }
+    //            }
+    //            heap[idx] = Int(pow(2.0, 31.0))
+    //            print(min == Int(pow(2.0, 31.0)) ? 0 : min)
+    //        }
+    //    }
+    //    else {
+    //        heap.append(input)
+    //    }
+    //}
+
+    //MARK: 백준 11286 절댓값 힙 <우선순위 큐> - 시간초과
+//    var heap = [Int]()
+//
+//    for _ in 0..<Int(readLine()!)! {
+//        let input = Int(readLine()!)!
+//
+//        if input == 0 {
+//            if heap.count == 0 { print("0") }
+//
+//            else {
+//                var (min, idx) = (Int(pow(2.0, 31.0)), 0)
+//
+//                for i in 0..<heap.count {
+//                    if abs(min) > abs(heap[i]) || (abs(min) == abs(heap[i]) && min >= heap[i]) {
+//                        min = heap[i]
+//                        idx = i
+//                    }
+//                }
+//                heap[idx] = Int(pow(2.0, 31.0))
+//                print(min == Int(pow(2.0, 31.0)) ? 0 : min)
+//            }
+//        }
+//        else { heap.append(input) }
+//    }
+
 }
