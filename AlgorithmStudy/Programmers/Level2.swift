@@ -136,3 +136,70 @@ import Foundation
 //
 //    return result
 //}
+
+//MARK: 프로그래머스-올바른 괄호 <Queue>
+//func solution(_ s:String) -> Bool
+//{
+//    var s = s.map { String($0) }
+//    var count = 0
+//
+//    for i in s {
+//        if i == "(" { count += 1 }
+//        else { count -= 1}
+//        if count < 0 { return false }
+//    }
+//
+//
+//    return count == 0 ? true : false
+//}
+
+//MARK: 프로그래머스-프로세스 <Dequeue>
+//func solution(_ priorities:[Int], _ location:Int) -> Int {
+//    var p = priorities
+//    var result = 0
+//    var location = location
+//    while p.count != 0 {
+//        location -= 1
+//        let max = p.max()!
+//        let l = p[0]
+//        if l != max {
+//            p.append(l)
+//            p.removeFirst()
+//            if location < 0 { location = p.count - 1}
+//        }
+//        else {
+//            result += 1
+//            p.removeFirst()
+//            if location < 0 { break }
+//        }
+//    }
+//    return result
+//}
+
+// removeFirst()를 사용하지 않은 시간 단축
+//func solution(_ priorities:[Int], _ location:Int) -> Int {
+//    var p = priorities
+//    var result = 0
+//    var (location, idx) = (location, -1)
+//    while p.count != 0 {
+//        //location -= 1
+//        idx += 1
+//        print(location, idx)
+//        let max = p.max()!
+//        let l = p[idx]
+//        if l != max {
+//            p.append(l)
+//            p[idx] = 0
+//            if location == idx { location = p.count - 1}
+//            print(p, "+")
+//        }
+//        else {
+//            result += 1
+//            p[idx] = 0
+//            if location == idx { break }
+//            print(p, "-", result)
+//        }
+//    }
+//    return result
+//}
+//
