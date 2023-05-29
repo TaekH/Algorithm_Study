@@ -176,7 +176,7 @@ import Foundation
 //    return result
 //}
 
-// removeFirst()를 사용하지 않은 시간 단축
+//MARK:  removeFirst()를 사용하지 않은 시간 단축
 //func solution(_ priorities:[Int], _ location:Int) -> Int {
 //    var p = priorities
 //    var result = 0
@@ -203,3 +203,31 @@ import Foundation
 //    return result
 //}
 //
+
+//MARK: 프로그래머스 가장 큰 수 <정렬>
+//func solution(_ numbers:[Int]) -> String {
+//    var sortedNumbers = numbers.sorted(by: { Int("\($0)\($1)")! > Int("\($1)\($0)")!})
+//    let result = sortedNumbers.reduce("") { $0 + "\($1)"}
+//    if sortedNumbers[0] == 0 {
+//        return "0"
+//    }
+//    return result
+//}
+
+//MARK: 프로그래머스 의상 <해시>
+//func solution(_ clothes:[[String]]) -> Int {
+//    var dic = [String: Int]()
+//    
+//    for i in clothes {
+//        if dic[i[1]] != nil {
+//            dic[i[1]]! += 1
+//        }
+//        else { dic[i[1]] = 1}
+//    }
+//    var count = 1
+//    
+//    for i in dic {
+//        count *= i.value+1
+//    }
+//    return count-1
+//}
