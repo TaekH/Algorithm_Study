@@ -231,3 +231,18 @@ import Foundation
 //    }
 //    return count-1
 //}
+
+//MARK: 프로그래머스 H-Index <정렬>
+//func solution(_ citations:[Int]) -> Int {
+//    var m = 0
+//    var citations = citations.sorted(by: { $0 < $1})
+//    var n = citations.count
+//    for i in 0..<citations.count {
+//        var hIndex = n - i
+//        if citations[i] >= hIndex {
+//            m = hIndex
+//            break
+//        }
+//    }
+//    return m
+//}

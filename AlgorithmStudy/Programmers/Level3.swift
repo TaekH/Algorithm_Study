@@ -120,3 +120,26 @@ import Foundation
 //    
 //    return result
 //}
+
+//MARK: 프로그래머스 베스트 앨범 <해시>
+//func solution(_ genres:[String], _ plays:[Int]) -> [Int] {
+//    var result = [Int]()
+//    var list = [String: [[Int]]]()
+//    for i in 0..<genres.count {
+//        if list[genres[i]] != nil {
+//            list[genres[i]]?.append([plays[i], i])
+//        }
+//        else { list[genres[i]] = [[plays[i], i]]}
+//    }
+//    let sortedList = list.sorted { $0.value.map { $0[0] }.reduce(0,+) > $1.value.map { $0[0] }.reduce(0,+) }
+//    
+//    for i in 0..<sortedList.count {
+//        let values = sortedList[i].value.sorted { $0[0] > $1[0] || ($0[0] == $1[0] && $0[1] < $1[1]) }
+//
+//        if values.count <= 1 { result.append(values[0][1])}
+//        else {
+//            result += [values[0][1], values[1][1]]
+//        }
+//    }
+//    return result
+//}
