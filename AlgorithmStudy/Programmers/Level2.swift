@@ -246,3 +246,48 @@ import Foundation
 //    }
 //    return m
 //}
+
+//MARK: 프로그래머스 소수찾기 <완전 탐색>
+//func solution(_ numbers:String) -> Int {
+//    var numbers = numbers.map { (String($0)) }
+//    var visited = Array(repeating: false, count: numbers.count)
+//    var result = [Int]()
+//
+//    func isPrime(_ num: Int) -> Bool {
+//        if num < 4 {
+//            return (num <= 1) ? false : true
+//        } else {
+//            for i in 2...Int(sqrt(Double(num))) {
+//                if num % i == 0 {
+//                    return false
+//                }
+//            }
+//        }
+//        return true
+//    }
+//
+//    func getNumbers(_ depth: Int, _ number: String, _ count: Int) {
+//        if depth == count {
+//            if let number = Int(number) {
+//                if !result.contains(number) && isPrime(number) {
+//                    result.append(number)
+//                }
+//            }
+//        } else {
+//            for i in 0..<numbers.count {
+//                if visited[i] == false {
+//                    visited[i] = true
+//                    getNumbers(depth+1, number + numbers[i], count)
+//                    visited[i] = false
+//                }
+//            }
+//        }
+//    }
+//
+//    for i in  1...numbers.count {
+//        getNumbers(0, "", i)
+//    }
+//
+//
+//    return result.count
+//}
