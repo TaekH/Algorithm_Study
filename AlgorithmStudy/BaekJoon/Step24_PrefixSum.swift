@@ -77,4 +77,42 @@ fileprivate class Step24_PrefixSum {
     //        print(dp[e][idx] - dp[s-1][idx])
     //    }
     //}
+    
+    //MARK: 백준 10986 나머지합 실패
+    //let input = readLine()!.split(separator: " ").map { Int(String($0))! }
+    //var n = readLine()!.split(separator: " ").map { Int(String($0))! }
+    //var array = Array(repeating: 0, count: n.count)
+    //var tmp = Array(repeating: 0, count: input[1])
+    //array[0] = n[0]
+    //tmp[ n[0]%input[1] ] += 1
+    //var result = 0
+    //for i in 1..<n.count {
+    //    array[i] = n[i] + array[i-1]
+    //    array[i] %= input[1]
+    //    if array[i] == 0 { result += 1 }
+    //    tmp[array[i]] += 1
+    //}
+    //for i in 0..<input[1] {
+    //        result += (tmp[i] * (tmp[i]-1)) / 2
+    //}
+    //print(result)
+
+    //MARK: 백준 10986 나머지합
+    //let input = readLine()!.split(separator: " ").map { Int(String($0))! }
+    //var n = readLine()!.split(separator: " ").map { Int(String($0))! }
+    //var array = Array(repeating: 0, count: n.count)
+    //var tmp = Array(repeating: 0, count: input[1])
+    //var result = 0
+    //for i in 0..<n.count {
+    //    if i == 0 { array[i] = n[i] }
+    //    else {
+    //        array[i] = n[i] + array[i-1]
+    //    }
+    //    tmp[array[i] % input[1]] += 1
+    //}
+    //for i in 0..<input[1] {
+    //        result += (tmp[i] * (tmp[i]-1)) / 2
+    //}
+    //print(result + tmp[0])
+
 }

@@ -291,3 +291,19 @@ import Foundation
 //
 //    return result.count
 //}
+
+//MARK: 프로그래머스 요격 시스템
+//func solution(_ targets:[[Int]]) -> Int {
+//    let targets = targets.sorted(by: { $0[1] < $1[1] })
+//    var e = 0
+//    var result = 0
+//    for target in targets {
+//        if target[0] >= e {
+//            result += 1
+//            e = target[1]
+//        }
+//    }
+//    return result
+//}
+
+//MARK: 

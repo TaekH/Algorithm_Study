@@ -143,3 +143,20 @@ import Foundation
 //    }
 //    return result
 //}
+
+//MARK: 프로그래머스 연속 펄스 부분 수열의 합
+//func solution(_ sequence:[Int]) -> Int64 {
+//    var arr1 = sequence
+//    var arr2 = sequence
+//    for i in 0..<sequence.count {
+//        if i % 2 != 0 { arr1[i] = -arr1[i] }
+//        else { arr2[i] = -arr2[i] }
+//    }
+//    for i in 1..<arr1.count {
+//        arr1[i] = max(arr1[i-1]+arr1[i], arr1[i])
+//        arr2[i] = max(arr2[i]+arr2[i-1], arr2[i])
+//    }
+//    var result = max(arr1.max()!, arr2.max()!)
+//    return Int64(result)
+//}
+
