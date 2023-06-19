@@ -306,4 +306,104 @@ import Foundation
 //    return result
 //}
 
-//MARK: 
+//MARK: 프로그래머스 혼자서하는 틱택토
+//func solution(_ board:[String]) -> Int {
+//    var boards = [[Character]]()
+//    var oCount = 0
+//    var xCount = 0
+//    for r in board {
+//        boards.append(Array(r))
+//        for c in r {
+//            if c == "." { continue }
+//            else if c == "O" { oCount += 1 }
+//            else { xCount += 1 }
+//        }
+//    }
+//    if xCount > oCount || xCount + 1 < oCount { return 0 }
+//
+//    var oBingo = 0
+//    var xBingo = 0
+//
+//    for i in 0..<3 {
+//        if boards[i][0] != "." && boards[i][0] == boards[i][1] && boards[i][1] == boards[i][2] {
+//            if boards[i][0] == "O" { oBingo += 1 }
+//            else { xBingo += 1 }
+//        }
+//
+//        if boards[0][i] != "." && boards[0][i] == boards[1][i] && boards[1][i] == boards[2][i] {
+//            if boards[0][i] == "O" { oBingo += 1 }
+//            else { xBingo += 1 }
+//        }
+//    }
+//
+//    if boards[1][1] == "O" {
+//        if boards[2][0] == boards[1][1] && boards[0][2] == boards[1][1] { oBingo += 1 }
+//        if boards[0][0] == boards[1][1] && boards[2][2] == boards[1][1] { oBingo += 1 }
+//    }
+//    if boards[1][1] == "X" {
+//        if boards[2][0] == boards[1][1] && boards[0][2] == boards[1][1] { xBingo += 1 }
+//        if boards[0][0] == boards[1][1] && boards[2][2] == boards[1][1] { xBingo += 1 }
+//    }
+//
+//    if xBingo != 0 &&  oBingo != 0 { return 0 }
+//    if oBingo == 1 && oCount <= xCount { return 0 }
+//    if xBingo == 1 && xCount < oCount { return 0 }
+//    return 1
+//}
+
+//MARK: 프로그래머스 호텔 대실
+//func solution(_ book_time:[[String]]) -> Int {
+//    var newTime = book_time.sorted {
+//        if $0[0] == $1[0] {
+//            return $0[1] < $1[1]
+//        } else { return $0[0] < $1[0] }
+//    }
+//    var time = [(Int, Int)]()
+//    var rooms = [(Int, Int)]()
+//    for i in 0..<newTime.count {
+//        var tmp = newTime[i][0].split(separator: ":")
+//        var tmp2 = newTime[i][1].split(separator: ":")
+//        time.append((Int(String(tmp[0]))!*60 + Int(String(tmp[1]))!, Int(String(tmp2[0]))!*60 + Int(String(tmp2[1]))!))
+//
+//    }
+//    print(time)
+//    var idx = 0
+//    loop1: for t in time {
+//        for (i, r) in rooms.enumerated() {
+//            if !(r.0..<(r.1 + 10) ~= t.0) {
+//                rooms[i] = t
+//                continue loop1
+//            }
+//        }
+//        rooms.append(t)
+//    }
+//    return rooms.count
+//}
+
+//MARK: 프로그래머스 연속된 부분 수열의 합
+//func solution(_ sequence:[Int], _ k:Int) -> [Int] {
+//    var (l, r) = (0,-1)
+//    var sum = 0
+//    var result = [0,sequence.count]
+//    while l < sequence.count {
+//        if r == sequence.count-1 && sum < k {
+//            break
+//        }
+//        if sum < k {
+//            r += 1
+//            sum += sequence[r]
+//        }
+//        else if sum > k {
+//            sum -= sequence[l]
+//            l += 1
+//        }
+//        if sum == k {
+//            if r-l < result[1]-result[0] {
+//                result = [l,r]
+//            }
+//            sum -= sequence[l]
+//            l += 1
+//        }
+//    }
+//    return result
+//}

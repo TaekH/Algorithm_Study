@@ -76,3 +76,75 @@ import Foundation
 //    }
 //    return result
 //}
+
+//MARK: 프로그래머스 달리기 경주
+//func solution(_ players:[String], _ callings:[String]) -> [String] {
+//    var dic = [String: Int]()
+//    var players = players
+//    for i in 0..<players.count {
+//        dic[players[i]] = i
+//    }
+//    for i in callings {
+//        var tmp = players[dic[i]! - 1]
+//        players[dic[tmp]!] = i
+//        players[dic[i]!] = tmp
+//        dic[tmp]! += 1
+//        dic[i]! -= 1
+//    }
+//    return players
+//}
+
+//MARK: 프로그래머스 추억 점수
+//func solution(_ name:[String], _ yearning:[Int], _ photo:[[String]]) -> [Int] {
+//    var dic = [String : Int]()
+//
+//    for i in 0..<name.count {
+//        dic[name[i]] = yearning[i]
+//    }
+//    var result = [Int]()
+//    for i in photo {
+//        var tmp = 0
+//        for j in i {
+//            tmp += dic[j] ?? 0
+//        }
+//        result.append(tmp)
+//    }
+//    return result
+//}
+
+//MARK: 프로그래머스 카드 뭉치
+//func solution(_ cards1:[String], _ cards2:[String], _ goal:[String]) -> String {
+//    var idx1 = 0
+//    var idx2 = 0
+//    for word in goal {
+//        if !cards1.contains(word) && !cards2.contains(word) {
+//            return "No"
+//        }
+//
+//        if idx1 < cards1.count && cards1[idx1] == word {
+//            idx1 += 1
+//        }
+//        else if idx2 < cards2.count && cards2[idx2] == word {
+//            idx2 += 1
+//        }
+//        else { return "No"}
+//    }
+//
+//    return "Yes"
+//}
+
+//MARK: 프로그래머스 덧칠하기
+//func solution(_ n:Int, _ m:Int, _ section:[Int]) -> Int {
+//    var count = 0
+//
+//    section.reduce(section.min()!) { result, value in
+//        if result + m - 1 < value {
+//            count += 1
+//            return value
+//        }
+//
+//        return result
+//    }
+//
+//    return count + 1
+//}
