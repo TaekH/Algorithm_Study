@@ -407,3 +407,35 @@ import Foundation
 //    }
 //    return result
 //}
+
+//MARK: 프로그래머스 최댓값과 최솟값
+//func solution(_ s:String) -> String {
+//    var s = s.split(separator: " ").map { Int(String($0))! }
+//    let result = String(s.min()!) + " " + String(s.max()!)
+//    return result
+//}
+
+//MARK: 프로그래머스 JadenCase 문자열 만들기
+//func solution(_ s:String) -> String {
+//    var s = s.map { String($0) }
+//    var result = ""
+//    var isBlank = true
+//    for c in s {
+//        result += !isBlank ? c.lowercased() : c.uppercased()
+//        isBlank = (c == " ")
+//    }
+//
+//    return result
+//}
+
+//MARK: 프로그래머스 최솟값 만들기
+//func solution(_ A:[Int], _ B:[Int]) -> Int
+//{
+//    var A = A.sorted(by: >)
+//    var B = B.sorted(by: <)
+//    var result = 0
+//    for i in 0..<A.count {
+//        result += A[i] * B[i]
+//    }
+//    return result
+//}

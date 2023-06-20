@@ -160,3 +160,20 @@ import Foundation
 //    return Int64(result)
 //}
 
+//MARK: 프로그래머스 인사고과
+//func solution(_ scores:[[Int]]) -> Int {
+//    var whScore = scores[0].reduce(0, +)
+//    var wh = scores[0]
+//    var result = 1
+//    var sortedScores = scores.sorted(by: { $0[0] > $1[0] || ($0[0] == $1[0] && $0[1] < $1[1])})
+//    var ytmp = 0
+//    for s in sortedScores {
+//        if s[0] > wh[0] && s[1] > wh[1] { return -1 }
+//        if s.reduce(0, +) > whScore && s[1] >= ytmp {
+//            result += 1
+//            ytmp = s[1]
+//        }
+//    }
+//    return result
+//}
+
