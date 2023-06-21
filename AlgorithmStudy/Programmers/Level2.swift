@@ -439,3 +439,76 @@ import Foundation
 //    }
 //    return result
 //}
+
+//MARK: 프로그래머스 짝지어 제거하기
+//func solution(_ s:String) -> Int {
+//    var result = [Character]()
+//    var str = ""
+//    var s = Array(s)
+//    for i in 0..<s.count {
+//        if !result.isEmpty && result.last == s[i] {
+//            result.removeLast()
+//        } else {
+//            result.append(s[i])
+//        }
+//    }
+//    return result.isEmpty ? 1 : 0
+//}
+
+//MARK: 프로그래머스 이진변환 반복하기
+//func solution(_ s:String) -> [Int] {
+//    var str = s
+//    var count = 0
+//    var zeroCount = 0
+//    func getBinary() {
+//        if str == "1" {
+//            return
+//        }
+//        else {
+//            count += 1
+//            var tmp = ""
+//            for i in str {
+//                if i != "0" {
+//                    tmp += String(i)
+//                } else { zeroCount += 1 }
+//            }
+//            str = String(tmp.count, radix: 2)
+//            getBinary()
+//        }
+//    }
+//    getBinary()
+//    return [count, zeroCount]
+//}
+
+//MARK: 프로그래머스 영어 끝말잇기
+//func solution(_ n:Int, _ words:[String]) -> [Int] {
+//    var groups = [[Character]]()
+//
+//    for i in words {
+//        groups.append(Array(i))
+//    }
+//    
+//    var round = 1
+//    var personNum = 1
+//    var tmp = groups[0]
+//    var check = [String : Int]()
+//    check[String(groups[0])] = 0
+//    for i in 1..<words.count {
+//        if personNum == n {
+//            personNum = 0
+//            round += 1
+//        }
+//        personNum += 1
+//
+//        if tmp.last! == groups[i][0] && check[String(groups[i])] == nil {
+//            tmp = groups[i]
+//            check[String(groups[i])] = 0
+//        } else { break }
+//
+//        if i == words.count - 1 {
+//            personNum = 0
+//            round = 0
+//        }
+//    }
+//    return [personNum, round]
+//}
