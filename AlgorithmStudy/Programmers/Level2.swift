@@ -512,3 +512,53 @@ import Foundation
 //    }
 //    return [personNum, round]
 //}
+
+//MARK: 프로그래머스 피보나치 수 - 시간 초과
+//func solution(_ n:Int) -> Int {
+//
+//    func fibo(_ n: Int) -> Int {
+//        if n > 1 {
+//            var num = n % 1234567
+//            return fibo(num-1) + fibo(num-2)
+//        }
+//        else if n == 0 { return 0 }
+//        else { return 1 }
+//    }
+//    return fibo(n)
+//}
+
+
+//MARK: 프로그래머스 피보나치 수
+//func solution(_ n:Int) -> Int {
+//    var result = [Int]()
+//    for i in 0...n {
+//        if i <= 1 { result.append(i) }
+//        else {
+//            var sum = result[i-1] + result[i-2]
+//            result.append(sum % 1234567)
+//        }
+//    }
+//    return result[n]
+//}
+
+//MARK: 프로그래머스 귤 고르기
+//func solution(_ k:Int, _ tangerine:[Int]) -> Int {
+//    var dic = [Int: Int]()
+//    for i in tangerine {
+//        if dic[i] == nil { dic[i] = 1 }
+//        else { dic[i]! += 1 }
+//    }
+//    var result = dic.sorted(by: {
+//        if $0.value == $1.value {
+//            return $0.key < $1.key
+//        } else { return $0.value > $1.value }
+//    })
+//    var count = 0
+//    var num = 0
+//    for i in 0..<result.count {
+//        if count >= k { break }
+//        count += result[i].value
+//        num += 1
+//    }
+//    return num
+//}

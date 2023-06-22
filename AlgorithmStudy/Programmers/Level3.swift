@@ -177,3 +177,34 @@ import Foundation
 //    return result
 //}
 
+//MARK: 프로그래머스 숫자 게임 - 시간초과
+//func solution(_ a:[Int], _ b:[Int]) -> Int {
+//    var b = b.sorted(by: <)
+//    var a = a.sorted(by: <)
+//    var point = 0
+//    for i in 0..<a.count {
+//        for j in 0..<b.count {
+//            if a[i] < b[j] {
+//                point += 1
+//                b[j] = 0
+//                break
+//            }
+//        }
+//    }
+//    return point
+//}
+
+//MARK: 프로그래머스 숫자 게임
+//func solution(_ a:[Int], _ b:[Int]) -> Int {
+//    var b = b.sorted(by: >)
+//    var a = a.sorted(by: >)
+//    var point = 0
+//    var idx = 0
+//    for i in 0..<a.count {
+//        if a[i] < b[idx] {
+//            point += 1
+//            idx += 1
+//        }
+//    }
+//    return point
+//}
