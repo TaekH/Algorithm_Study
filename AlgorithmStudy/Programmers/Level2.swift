@@ -562,3 +562,72 @@ import Foundation
 //    }
 //    return num
 //}
+
+//MARK: N개의 최소공배수
+//func solution(_ arr:[Int]) -> Int {
+//    func gcd(_ a: Int, _ b: Int) -> Int {
+//        var r = 0
+//        var a = a
+//        var b = b
+//        while b != 0 {
+//            r = a % b
+//            a = b
+//            b = r
+//        }
+//        return ax
+//    }
+//    var arr = arr.sorted(by: >)
+//    if arr.count == 1 { return 2 }
+//    var tmp = arr[0] * arr[1] / gcd(arr[0], arr[1])
+//    if arr.count == 2 { return tmp }
+//    for i in 2 ..< arr.count {
+//        tmp = tmp * arr[i] / gcd(tmp, arr[i])
+//    }
+//    return tmp
+//}
+
+//MARK: 프로그래머스 예상 대진표
+//func solution(_ n:Int, _ a:Int, _ b:Int) -> Int
+//{
+//    var a = a
+//    var b = b
+//    var round = 0
+//    while true {
+//        round += 1
+//        a = (a/2) + (a%2)
+//        b = (b/2) + (b%2)
+//        if a == b {
+//            break
+//        }
+//    }
+//    return round
+//}
+
+//MARK: 프로그래머스 멀리뛰기
+//func solution(_ n:Int) -> Int {
+//    var result = [1,2]
+//    var i = 0
+//    while result.count < n {
+//        result.append((result[i] + result[i+1]) % 1234567)
+//        i += 1
+//    }
+//    return result[n-1]
+//}
+
+//MARK: 점프와 순간이동
+//func solution(_ n:Int) -> Int
+//{
+//    var n = n
+//    var result = 0
+//    while n > 0 {
+//        if n % 2 == 0 {
+//            n /= 2
+//        }
+//        else {
+//            n -= 1
+//            result += 1
+//        }
+//    }
+//
+//    return result
+//}
