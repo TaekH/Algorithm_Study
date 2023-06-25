@@ -415,7 +415,7 @@ import Foundation
 //    return result
 //}
 
-//MARK: 프로그래머스 JadenCase 문자열 만들기
+//MARK: 프로그래머스 <JadenCase 문자열 만들기>
 //func solution(_ s:String) -> String {
 //    var s = s.map { String($0) }
 //    var result = ""
@@ -428,7 +428,7 @@ import Foundation
 //    return result
 //}
 
-//MARK: 프로그래머스 최솟값 만들기
+//MARK: 프로그래머스 <최솟값 만들기>
 //func solution(_ A:[Int], _ B:[Int]) -> Int
 //{
 //    var A = A.sorted(by: >)
@@ -440,7 +440,7 @@ import Foundation
 //    return result
 //}
 
-//MARK: 프로그래머스 짝지어 제거하기
+//MARK: 프로그래머스 <짝지어 제거하기>
 //func solution(_ s:String) -> Int {
 //    var result = [Character]()
 //    var str = ""
@@ -455,7 +455,7 @@ import Foundation
 //    return result.isEmpty ? 1 : 0
 //}
 
-//MARK: 프로그래머스 이진변환 반복하기
+//MARK: 프로그래머스 <이진변환 반복하기>
 //func solution(_ s:String) -> [Int] {
 //    var str = s
 //    var count = 0
@@ -480,7 +480,7 @@ import Foundation
 //    return [count, zeroCount]
 //}
 
-//MARK: 프로그래머스 영어 끝말잇기
+//MARK: 프로그래머스 <영어 끝말잇기>
 //func solution(_ n:Int, _ words:[String]) -> [Int] {
 //    var groups = [[Character]]()
 //
@@ -513,7 +513,7 @@ import Foundation
 //    return [personNum, round]
 //}
 
-//MARK: 프로그래머스 피보나치 수 - 시간 초과
+//MARK: 프로그래머스 <피보나치 수> - 시간 초과
 //func solution(_ n:Int) -> Int {
 //
 //    func fibo(_ n: Int) -> Int {
@@ -528,7 +528,7 @@ import Foundation
 //}
 
 
-//MARK: 프로그래머스 피보나치 수
+//MARK: 프로그래머스 <피보나치 수>
 //func solution(_ n:Int) -> Int {
 //    var result = [Int]()
 //    for i in 0...n {
@@ -541,7 +541,7 @@ import Foundation
 //    return result[n]
 //}
 
-//MARK: 프로그래머스 귤 고르기
+//MARK: 프로그래머스 <귤 고르기>
 //func solution(_ k:Int, _ tangerine:[Int]) -> Int {
 //    var dic = [Int: Int]()
 //    for i in tangerine {
@@ -563,7 +563,7 @@ import Foundation
 //    return num
 //}
 
-//MARK: N개의 최소공배수
+//MARK: 프로그래머스 <N개의 최소공배수>
 //func solution(_ arr:[Int]) -> Int {
 //    func gcd(_ a: Int, _ b: Int) -> Int {
 //        var r = 0
@@ -586,7 +586,7 @@ import Foundation
 //    return tmp
 //}
 
-//MARK: 프로그래머스 예상 대진표
+//MARK: 프로그래머스 <예상 대진표>
 //func solution(_ n:Int, _ a:Int, _ b:Int) -> Int
 //{
 //    var a = a
@@ -603,7 +603,7 @@ import Foundation
 //    return round
 //}
 
-//MARK: 프로그래머스 멀리뛰기
+//MARK: 프로그래머스 <멀리뛰기>
 //func solution(_ n:Int) -> Int {
 //    var result = [1,2]
 //    var i = 0
@@ -614,7 +614,7 @@ import Foundation
 //    return result[n-1]
 //}
 
-//MARK: 점프와 순간이동
+//MARK: 프로그래머스 <점프와 순간이동>
 //func solution(_ n:Int) -> Int
 //{
 //    var n = n
@@ -627,6 +627,143 @@ import Foundation
 //            n -= 1
 //            result += 1
 //        }
+//    }
+//
+//    return result
+//}
+
+
+//MARK: 프로그래머스 <다음 큰 숫자>
+//func solution(_ n:Int) -> Int
+//{
+//    var nCount = String(n, radix: 2).filter { ($0 == "1")}.count
+//    var num = n + 1
+//    while true {
+//        if nCount == String(num, radix: 2).filter { ($0 == "1")}.count {
+//            return num
+//        }
+//        num += 1
+//    }
+//}
+
+//MARK: 프로그래머스 <다음 큰 숫자> - 리팩토링
+//func solution(_ n:Int) -> Int
+//{
+//    var num = n + 1
+//    while true {
+//        if n.nonzeroBitCount == num.nonzeroBitCount {
+//            return num
+//        }
+//        num += 1
+//    }
+//}
+
+//MARK: 프로그래머스 <괄호 회전하기>
+//func solution(_ s:String) -> Int {
+//
+//    func isValidate(_ s: String) -> Int {
+//        var stack = [Character]()
+//
+//        for i in s {
+//            if i == "[" || i == "(" || i == "{" {
+//                stack.append(i)
+//            }
+//            else {
+//                if stack.isEmpty { return 0 }
+//                let c = stack.removeLast()
+//                if c == "[" && i != "]" {
+//                    return 0
+//                }
+//                else if c == "{" && i != "}" {
+//                    return 0
+//                }
+//                else if c == "(" && i != ")" {
+//                    return 0
+//                }
+//            }
+//        }
+//        return stack.isEmpty ? 1 : 0
+//    }
+//    var result = 0
+//    var str = s
+//    for i in 0..<s.count {
+//        let c = str.first!
+//        str.removeFirst()
+//        str.append(c)
+//        if c == "[" || c == "{" || c == "(" {
+//            result += 0
+//        }
+//        else {
+//            result += isValidate(str)
+//        }
+//    }
+//    return result
+//}
+
+//MARK: 프로그래머스 <괄호 회전하기> - 리팩토링
+//func solution(_ s:String) -> Int {
+//
+//    func isValidate(_ s: String) -> Int {
+//        var stack = [Character]()
+//        let dic : [Character: Character] = ["{":"}", "(":")", "[":"]"]
+//
+//        for i in s {
+//            if !stack.isEmpty && dic[stack.last!] == i {
+//                stack.removeLast()
+//            } else {
+//                stack.append(i)
+//            }
+//        }
+//        return stack.isEmpty ? 1 : 0
+//    }
+//    var result = 0
+//    var str = s
+//    for i in 0..<s.count {
+//        let c = str.first!
+//        str.removeFirst()
+//        str.append(c)
+//        if c == "[" || c == "{" || c == "(" {
+//            result += 0
+//        }
+//        else {
+//            result += isValidate(str)
+//        }
+//    }
+//    return result
+//}
+//
+
+//MARK: 프로그래머스 <할인 행사>
+//func solution(_ want:[String], _ number:[Int], _ discount:[String]) -> Int {
+//    var dic = [String: Int]()
+//    var discountDic = [String: Int]()
+//    var result = 0
+//    for i in 0..<want.count {
+//        dic[want[i]] = number[i]
+//    }
+//    for i in 0 ..< 10 {
+//        let num = discountDic[discount[i]] ?? 0
+//        discountDic[discount[i]] = num + 1
+//    }
+//
+//    func isValidate() -> Int {
+//        for i in dic {
+//            if discountDic[i.key] ?? 0 < i.value {
+//                return 0
+//            }
+//        }
+//        return 1
+//    }
+//
+//    result += isValidate()
+//
+//    for i in 10..<discount.count {
+//        let delete = discount[i - 10]
+//        let insert = discount[i]
+//
+//        discountDic[delete] = (discountDic[delete] ?? 0) - 1
+//        discountDic[insert] = (discountDic[insert] ?? 0) + 1
+//        result += isValidate()
 //    }
 //
 //    return result
