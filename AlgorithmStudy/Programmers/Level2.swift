@@ -768,3 +768,52 @@ import Foundation
 //
 //    return result
 //}
+
+//MARK: 프로그래머스 <카펫>
+//func solution(_ brown:Int, _ yellow:Int) -> [Int] {
+//    let s = brown + yellow
+//    var (width,height) = (0,0)
+//    for w in stride(from: s - 1, to: 0, by: -1) {
+//
+//        if s % w != 0 { continue }
+//        height = s / w
+//        let y = (w - 2) * (height - 2)
+//        let b = s - y
+//
+//        if y == yellow && b == brown {
+//            width = w
+//            break
+//        }
+//    }
+//    return [width, height]
+//}
+
+//MARK: 프로그래머스 <연속 부분 수열 합의 개수> - 시간초과
+//func solution(_ elements:[Int]) -> Int {
+//    var result = Set<Int>()
+//    var tmp = elements[0]
+//    var e = elements + elements
+//    print(e)
+//    for i in 0..<elements.count {
+//        for j in 0..<elements.count {
+//            result.insert(e[j...j+i].reduce(0, +))
+//        }
+//    }
+//    return result.count
+//}
+
+//MARK: 프로그래머스 <연속 부분 수열 합의 개수>
+//func solution(_ elements:[Int]) -> Int {
+//    var result = Set<Int>()
+//    let count = elements.count
+//
+//    for i in 0..<count {
+//        var tmp = 0
+//        for j in 0..<count {
+//            let idx = (i + j) % count
+//            tmp += elements[idx]
+//            result.insert(tmp)
+//        }
+//    }
+//    return result.count
+//}
