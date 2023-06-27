@@ -817,3 +817,16 @@ import Foundation
 //    }
 //    return result.count
 //}
+
+//MARK: 프로그래머스 <n^2 배열 자르기>
+//func solution(_ n:Int, _ left:Int64, _ right:Int64) -> [Int] {
+//    var result = [Int]()
+//    let (left, right) = (Int(left), Int(right))
+//    for i in left...right {
+//        let a = i / n
+//        let b = i % n
+//        result.append(max(a,b)+1)
+//    }
+//    return result
+//}
+

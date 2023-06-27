@@ -208,3 +208,57 @@ import Foundation
 //    }
 //    return point
 //}
+
+//MARK: 프로그래머스 <이중우선순위큐>
+//func solution(_ operations:[String]) -> [Int] {
+//    var q = [Int]()
+//    for i in operations {
+//        let c = i.split(separator: " ").map { String($0) }
+//        let (type, num) = (c[0],Int(c[1])!)
+//
+//        if type == "I" {
+//            q.append(num)
+//        } else if !q.isEmpty {
+//            if num <= 0 {
+//                q.sort(by: >)
+//            } else {
+//                q.sort(by: <)
+//            }
+//            q.removeLast()
+//        }
+//    }
+//    return q.isEmpty ? [0,0] : [q.max()!, q.min()!]
+//}
+
+//MARK: 프로그래머스 <이중우선순위큐> - 시간복잡도 줄인 버전
+//sort는 O(nlogn), firstIndex(of:), remove(at:) 은 O(n)으로 시간복잡도를 줄임
+//func solution(_ operations:[String]) -> [Int] {
+//    var q = [Int]()
+//
+//    func deleteMax() {
+//        var max = q.max()!
+//        var idx = q.firstIndex(of: max)!
+//        q.remove(at: idx)
+//    }
+//    func deleteMin() {
+//        var min = q.min()!
+//        var idx = q.firstIndex(of: min)!
+//        q.remove(at: idx)
+//    }
+//
+//    for i in operations {
+//        let c = i.split(separator: " ").map { String($0) }
+//        let (type, num) = (c[0],Int(c[1])!)
+//
+//        if type == "I" {
+//            q.append(num)
+//        } else if !q.isEmpty {
+//            if num <= 0 {
+//                deleteMin()
+//            } else {
+//                deleteMax()
+//            }
+//        }
+//    }
+//    return q.isEmpty ? [0,0] : [q.max()!, q.min()!]
+//}
