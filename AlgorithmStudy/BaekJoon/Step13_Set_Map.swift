@@ -139,4 +139,33 @@ fileprivate class Step13_Set_Map {
     //}
     //print(a.count)
     
+    //MARK: 7785
+//    func solution() {
+//        var dic = [String: Int]()
+//        for i in 0..<Int(readLine()!)! {
+//            let input = readLine()!.split(separator: " ").map { String($0) }
+//            if input[1] == "enter" && dic[input[0]] == nil {
+//                dic[input[0]] = 0
+//            } else {
+//                dic[input[0]] = nil
+//            }
+//        }
+//        var arr = dic.keys.sorted(by: >)
+//        for i in 0..<arr.count {
+//            print(arr[i])
+//        }
+//    }
+//    solution()
+    
+    //MARK: 7785 리팩토링
+//    var set = Set<String>()
+//    for i in 0..<Int(readLine()!)! {
+//        let input = readLine()!.split(separator: " ").map { String($0) }
+//        if input[1] == "enter" {
+//            set.insert(input[0])
+//        } else {
+//            set.remove(input[0])
+//        }
+//    }
+//    print(set.sorted(by: >).joined(separator: "\n"))
 }

@@ -830,3 +830,24 @@ import Foundation
 //    return result
 //}
 
+//MARK: 프로그래머스 <피로도>
+//func solution(_ k:Int, _ dungeons:[[Int]]) -> Int {
+//    var visited = Array(repeating: false, count: dungeons.count)
+//    var result = 0
+//
+//    func dfs(_ r: Int, _ n: Int) {
+//        if result < r {
+//            result = r
+//        }
+//        for i in 0..<dungeons.count {
+//            if !visited[i] && n >= dungeons[i][0] {
+//                visited[i] = true
+//                dfs(r + 1 ,n - dungeons[i][1])
+//                visited[i] = false
+//            }
+//        }
+//    }
+//
+//    dfs(0, k)
+//    return result
+//}
