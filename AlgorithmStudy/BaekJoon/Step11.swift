@@ -172,4 +172,11 @@ fileprivate class Step11 {
     //var n = Int(readLine()!)!
     //print(pow(2,n)-1)
     //hanoi(n, 1, 3)
+    
+    //MARK: 27433 <팩토리얼 2>
+    //func facto(_ n: Int) -> Int {
+    //if n == 0 { return 1 }
+    //return n * facto(n-1)
+    //}
+    //print(facto(Int(readLine()!)!))
 }

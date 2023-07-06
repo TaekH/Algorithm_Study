@@ -129,4 +129,25 @@ class Step12_BruteForce {
     //}
     //print(m-1)
     
+    //MARK: 백준 19532 <수학은 비대면 강의입니다> - 수식 응용
+    //let input = readLine()!.split(separator: " ").map { Int(String($0))! }
+    //var x = ( input[2] * input[4] - input[1] * input[5] ) / ( input[0] * input[4] - input[1] * input[3] )
+    //var y = ( input[2] * input[3] - input[0] * input[5] ) / ( input[1] * input[3] - input[0] * input[4] )
+    //print(x, y)
+
+    //MARK: 백준 19532 <수학은 비대면 강의입니다> - 완전탐색
+    //func bruteforce() {
+    //    let input = readLine()!.split(separator: " ").map { Int(String($0))! }
+    //    for x in -999 ... 999 {
+    //        for y in -999 ... 999 {
+    //            if (input[0] * x + input[1] * y == input[2]) && (input[3] * x + input[4] * y == input[5]) {
+    //                print(x, y)
+    //                return
+    //            }
+    //        }
+    //    }
+    //}
+    //bruteforce()
+
 }
+

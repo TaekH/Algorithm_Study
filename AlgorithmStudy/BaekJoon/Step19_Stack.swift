@@ -68,5 +68,36 @@ fileprivate class Step19_Stack {
     //    result += "\n"
     //}
     //print(result)
+    
+    //MARK: 백준 4949 <균형 잡힌 세상>
+    //while true {
+    //    let input = readLine()!.map { String($0) }
+    //    if input == ["."] { break }
+    //    var stack = [String]()
+    //    var result = 1
+    //    for c in input {
+    //        if c == "[" || c == "(" {
+    //            stack.append(c)
+    //        } else if c == "]" || c == ")" {
+    //            if stack.isEmpty {
+    //                result = 0
+    //                break
+    //            }
+    //            if c == "]" && stack.removeLast() != "[" {
+    //                result = 0
+    //                break
+    //            } else if c == ")" && stack.removeLast() != "(" {
+    //                result = 0
+    //                break
+    //            }
+    //        }
+    //    }
+    //    if result == 0 { print("no") }
+    //    else {
+    //        if stack.isEmpty { print("yes") }
+    //        else { print("no") }
+    //    }
+    //}
 
 }
+
